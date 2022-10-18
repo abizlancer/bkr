@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: 'oswald';
+  list-style: none;
+  text-decoration: none;
+  &::before, &::after {
+    font-family: 'icons';
+  }
+}
+:root {
+  --white: #fff;
+  --black: #171B1B;
+  --beige: #E7D4BE70;
+  --orange: #F5AE5C;
+  --light-orange: #F9BF77;
+}
+$white: var(--white);
+$black: var(--black);
+$beige: var(--beige);
+$orange: var(--orange);
+$light-orange: var(--light-orange);
+.icon {
+  &-chevron-up::before {content: '\f077'; font-weight: 400;}
+  &-chevron-down::before {content: '\f078'; font-weight: 400;}
+  &-facebook::before {content: '\f39e'; font-weight: 400;}
+  &-twitter::before {content: '\f099'; font-weight: 400;}
+  &-instagram::before {content: '\f16d'; font-weight: 400;}
+}
+.container {
+  @include container();
+  border: 1px solid red;
+}
+.logo {
+  @include fonts(40px, 48px, $black);
+  font-family: 'ultra';
+  text-transform: uppercase;
+}

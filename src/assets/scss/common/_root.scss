@@ -1,0 +1,51 @@
+@mixin media($size) {
+  @media(max-width: #{$size}px) {
+    @content
+  };
+};
+@mixin container() {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include media(1400) {max-width: 1140px;}
+  @include media(1200) {max-width: 920px;}
+  @include media(992) {max-width: 720px;}
+  @include media(768) {max-width: 540px;}
+  @include media(576) {max-width: 100%;}
+}
+@mixin FontFace($font, $Url, $fName, $ext, $format, $fWeight) {
+  @font-face {
+    font-family: $font;
+    src: url('#{$Url}-#{$fName}.#{$ext}') format(#{$format});
+    font-weight: $fWeight;
+  }
+}
+$icons: ('light-300', 300), ('brands-400', 400), ('regular-400', 400), ('solid-900', 900);
+$dmSans: ('Regular', 400);
+$oswald: ('Regular', 400);
+$ultra: ('Regular', 400);
+@each $name, $weight in $icons {
+  @include FontFace('icons', 'assets/fonts/icons/fa', $name, 'ttf', 'truetype', $weight)
+}
+@font-face {
+  font-family: 'dmSans';
+  src: url('assets/fonts/DMSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'oswald';
+  src: url('assets/fonts/Oswald-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'ultra';
+  src: url('assets/fonts/Ultra-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@mixin fonts($fz: null, $lh: null, $color: null, $fw: null) {
+  font-size: $fz;
+  line-height: $lh;
+  color: $color;
+  font-weight: $fw;
+}
