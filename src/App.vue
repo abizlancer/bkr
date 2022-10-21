@@ -1,12 +1,14 @@
 <template>
-  <Navbar/>
-  <Header/>
-  <Baked/>
+  <Navbar />
+  <Header />
+  <Baked />
+  <Video />
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import Header from "./components/Header.vue";
+import Video from "./components/Video.vue";
 import Baked from "./components/baked/Baked.vue"
 
 export default {
@@ -15,6 +17,7 @@ export default {
     Navbar,
     Header,
     Baked,
+    Video,
   },
  
 }

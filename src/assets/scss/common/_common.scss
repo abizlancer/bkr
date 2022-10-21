@@ -30,6 +30,7 @@ $light-orange: var(--light-orange);
   &-facebook::before {content: '\f39e'; font-weight: 400;}
   &-twitter::before {content: '\f099'; font-weight: 400;}
   &-instagram::before {content: '\f16d'; font-weight: 400;}
+  &-play::before {content: '\f04b'; font-weight: 400;}
 }
 .container {
   @include container();
