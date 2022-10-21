@@ -45,11 +45,6 @@
           right: 20%;
         }
       }
-      small {
-        @include fonts(16px, 32px, $black);
-        letter-spacing: 3px;
-        text-transform: uppercase;
-      }
       h1 {
         @include fonts(72px, 80px, $black);
         font-family: 'ultra';
