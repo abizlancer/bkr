@@ -1,9 +1,31 @@
 <template >
-  <section class="products">
+  <section class="products container">
     <titles subTitle="Our Products" title="Baked Fresh Every Morning" />
-    <article class="products__content">
-      <product-card :products="products" >
-    </article>
+    <div class="products__content">
+      <product-card class="products__card--big" :key="0">
+        <div class="products__card--img">
+          <img src="/src/assets/images/products/item1.png" alt="products img">
+        </div>
+       <div class="products__card--big--info">
+          <small>Bakery</small>
+          <h3>Homemade Bread</h3>
+          <div class="price">
+            <p>Flows by their place and supplies it with the necessary regelialia.</p>
+            <h3>$9</h3>
+          </div>
+       </div>
+      </product-card>
+      <product-card v-for="(product, key) in products" :key="key + 1" >
+        <div class="products__card--img">
+          <img :src="product.img" alt="products img">
+        </div>
+        <div class="products__card--info">
+          <small>{{ product.category }}</small>
+          <h3>{{ product.name }}</h3>
+          <h4>{{ product.price }}</h4>
+        </div>
+      </product-card>
+    </div>
   </section>
 </template>
 
@@ -20,13 +42,6 @@ export default {
   data() {
     return {
       products: [
-        {
-          img: "/src/assets/images/products/item1.png",
-          category: "Bakery",
-          name: "Homemade Bread",
-          desc: "Flows by their place and supplies it with the necessary regelialia.",
-          price: "$9",
-        },
         {
           img: "/src/assets/images/products/item2.png",
           category: "Bakery",

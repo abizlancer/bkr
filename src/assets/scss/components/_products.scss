@@ -1,0 +1,132 @@
+.products {
+  padding: 100px 0 112px;
+  background: $white;
+  @include media(992) {
+    padding: 50px 0;
+  }
+  .title {
+    width: 45%;
+    @include media(992) {
+      width: 100%;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 30px;
+    margin-top: 69px;
+    @include media(768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    grid-column: span 1;
+    overflow: hidden;
+    @include media(576) {
+      height: 413px;
+    }
+    &:hover {
+      img {
+        transform: scale(1.5);
+      }
+    }
+    &--img {
+      overflow: hidden;
+      height: 100%;
+    }
+    &--img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+      transition: 5s linear;
+    }
+    &--info {
+      display: grid;
+      row-gap: 12px;
+      padding: 25px 32px 35px;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      
+      small {
+        @include fonts(16px, 32px, $black);
+        letter-spacing: 3px;
+        grid-column: span 2;
+      }
+      h3 {
+        @include fonts(24px, 32px, $black);
+        grid-column: span 1;
+      }
+      h4 {
+        @include fonts(40px, 48px, $black);
+        font-family: 'ultra';
+        grid-column: span 1;
+        text-align: right;
+      }
+    }
+    
+    &--big {
+      position: relative;
+      grid-column: span 2;
+      @include media(768) {
+        grid-column: span 1;
+      }
+      &:hover {
+        &--img img {
+          transform: scale(1.5);
+        }
+      }
+      &--img img {
+        @extend img
+      }
+      &--info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 39px 48px;
+        
+        small {
+          @include fonts(16px, 32px, $white);
+          letter-spacing: 3px;
+        }
+        h3 {
+          @include fonts(40px, 48px, $white);
+          font-family: 'ultra';
+          margin: 16px 0 18px;
+          @include media(480) {
+            @include fonts(35px, 40px, $white);
+          }
+        }
+        .price {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          
+          p {
+            @include fonts(16px, 32px, rgba(255, 255, 255, 0.502972));
+            font-family: 'dmSans';
+            width: 322px;
+            @include media(480) {
+              @include fonts(12px, 25px, $white);
+            }
+          }
+          h3 {
+            @include fonts(40px, 48px, $white);
+            font-family: 'ultra';
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
