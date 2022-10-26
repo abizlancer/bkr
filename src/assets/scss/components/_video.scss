@@ -35,6 +35,9 @@
       }
       .video--play-btn {
         transform: translate(45px, -45px);
+        &::before {
+          @include fonts(30px, 24px, $orange)
+        }
       }
     }
     &--title {

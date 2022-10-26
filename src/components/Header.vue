@@ -4,7 +4,7 @@
       <div class="header__info--content">
         <img src="../assets/images/icons/crumbs.svg" alt="crumbs">
         <div class="header__info--content__text">
-          <titles subTitle="Sience 1984" title="Fresh Bakery Every Day'" />
+          <titles subTitle="Sience 1984" title="Fresh Bakery Every Day" />
           <p>Even the all-powerful Pointing has no control about the blind texts it is an almost.</p>
         </div>
       </div>

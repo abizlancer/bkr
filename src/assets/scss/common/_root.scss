@@ -16,14 +16,11 @@
 @mixin FontFace($font, $Url, $fName, $ext, $format, $fWeight) {
   @font-face {
     font-family: $font;
-    src: url('#{$Url}-#{$fName}.#{$ext}') format(#{$format});
+    src: url('#{$Url}-#{$fName}.#{$ext}') format("#{$format}");
     font-weight: $fWeight;
   }
 }
 $icons: ('light-300', 300), ('brands-400', 400), ('regular-400', 400), ('solid-900', 900);
-$dmSans: ('Regular', 400);
-$oswald: ('Regular', 400);
-$ultra: ('Regular', 400);
 @each $name, $weight in $icons {
   @include FontFace('icons', 'assets/fonts/icons/fa', $name, 'ttf', 'truetype', $weight)
 }
