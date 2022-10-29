@@ -1,9 +1,9 @@
 <template>
   <div class="tabs">
-    <span>01</span>
     <div class="tabs--content">
       <tabs-controls />
       <div class="tabs--content__items">
+        <span>{{ span }}</span>
         <tabs-item v-for="(item, key) in items" :key="key" :item="item" />
       </div>
     </div>
@@ -20,6 +20,6 @@ export default {
     TabsControls,
     TabsItem
   },
-  props: ["items"]
+  props: ["items", "span"]
 };
 </script>

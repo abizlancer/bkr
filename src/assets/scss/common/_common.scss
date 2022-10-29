@@ -52,4 +52,76 @@ $light-orange: var(--light-orange);
   @include fonts(56px, 64px, $black);
   text-transform: capitalize;
   font-family: 'ultra';
+  @include media(576) {
+    @include fonts(46px, 54px);
+  }
+}
+
+.tabs {
+  background: $white;
+  
+  span {
+    @include fonts(16px, 32px, $black);
+    display: inline-block;
+    letter-spacing: 3px;
+    margin: 59px 0 12px;
+  }
+  
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &--controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-right: 52px;
+    @include media(576) {
+      margin-right: 10px;
+    }
+  }
+  &-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $black;
+    cursor: pointer;
+    &::before {
+      color: $light-orange;
+    }
+  }
+  &--item {
+    margin: 16px 0;
+    &:first-of-type {
+      h4 {
+        font-family: "oswald";
+      }
+      p {
+        display: block;
+        height: unset;
+      }
+    }
+    h4 {
+      @include fonts(24px, 32px, $black);
+      font-family: "dmSans";
+      margin-bottom: 22px;
+    }
+    p {
+      @include fonts(16px, 32px, $light-black);
+      font-family: 'dmSans';
+      width: 60%;
+      height: 0;
+      overflow: hidden;
+      display: none;
+      margin-bottom: 35px;
+      @include media(768) {
+        width: 100%;
+      }
+    }
+  }
 }
