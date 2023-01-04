@@ -5,6 +5,7 @@
   <Baked />
   <Video />
   <Products />
+  <Process />
 </template>
 
 <script>
@@ -14,6 +15,7 @@ import About from "./components/About.vue";
 import Video from "./components/Video.vue";
 import Products from "./components/products/Products.vue";
 import Baked from "./components/baked/Baked.vue"
+import Process from "./components/process/Process.vue";
 
 export default {
   name: 'App',
@@ -24,6 +26,7 @@ export default {
     Baked,
     Video,
     Products,
+    Process,
   },
  
 }

@@ -1,0 +1,25 @@
+.process {
+  background: $black;
+
+  &--content {
+    .sub-title,
+    .title {
+      color: $white;
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &-card {
+    display: flex;
+    align-items: flex-end;
+    &:hover {
+      background: $orange;
+    }
+    &__content {
+      padding: 0 56px 47px 33px;
+    }
+
+  }
+}

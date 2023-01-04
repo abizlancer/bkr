@@ -8,6 +8,7 @@
     </div>
   </section>
 </template>
+
 <script>
 import Titles from "../Titles.vue";
 import BakedCard from "./BakedCard.vue";
@@ -37,7 +38,7 @@ export default {
           img: '/src/assets/images/icons/love/card3.svg',
           borderImg: '/src/assets/images/love/item.png',
           cardTitle: 'Tasty',
-          cardText: 'And if she hasn’t been rewritten, then they are still using her.'
+          cardText: 'And if she hasn\'t been rewritten, then they are still using her.'
         }
       ]
     }
