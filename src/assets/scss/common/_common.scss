@@ -34,7 +34,6 @@ $light-orange: var(--light-orange);
 }
 .container {
   @include container();
-  border: 1px solid red;
 }
 .logo {
   @include fonts(40px, 48px, $black);
